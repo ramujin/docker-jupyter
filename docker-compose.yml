@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  ubuntu-server:
+    build: # Dockerfile path
+      context: .
+    ports:
+      - 4321:4321 # host : container
+    container_name: jupyter-demo
+    volumes:
+      - ./shared:/app
